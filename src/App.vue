@@ -1,14 +1,18 @@
 <template>
   <div id="app">
-    <div id="nav">
+    <!-- <div id="nav">
       <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+    </div> -->
     <router-view/>
   </div>
 </template>
 
 <style lang="scss">
+body {
+    margin: 0;
+    text-align: center;
+
+}
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -18,6 +22,7 @@
 }
 #nav {
   padding: 30px;
+  background-color: #374140;
   a {
     font-weight: bold;
     color: #2c3e50;
@@ -25,5 +30,17 @@
       color: #42b983;
     }
   }
+}
+.toolbar{
+  background-color: red;
+  width:100px;
+  height: 50px;
+}
+.triangle-right {
+	width: 0;
+	height: 0;
+	border-top: 25px solid transparent;
+	border-left: 50px solid #555;
+	border-bottom: 25px solid transparent;
 }
 </style>
