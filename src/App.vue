@@ -1,46 +1,48 @@
 <template>
-  <div id="app">
-    <!-- <div id="nav">
-      <router-link to="/">Home</router-link> |
-    </div> -->
-    <router-view/>
-  </div>
+  <v-app>
+    <v-app-bar app class="hide">
+      <v-toolbar-title class="headline text-uppercase">
+        <span>Filiberto Reyes</span>   
+        <span class="font-weight-light"> |   Software Development</span>
+      </v-toolbar-title>
+      <v-spacer></v-spacer>
+      <v-btn
+        text
+        href="https://github.com/vuetifyjs/vuetify/releases/latest"
+        target="_blank"
+      >
+        <span class="mr-2">Latest Release</span>
+      </v-btn>
+    </v-app-bar>
+
+    <v-content>
+      <router-view/>
+    </v-content>
+  </v-app>
 </template>
 
-<style lang="scss">
-body {
-    margin: 0;
-    text-align: center;
+<script>
+import HelloWorld from './components/HelloWorld';
 
-}
+export default {
+  name: 'App',
+  components: {
+    HelloWorld,
+  },
+  data: () => ({
+    //
+  }),
+};
+</script>
+
+<style lang="scss">
+.hide{visibility: hidden;}
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: 'Calibri', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  /* text-align: center; */
   color: #2c3e50;
 }
-#nav {
-  padding: 30px;
-  background-color: #374140;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
-.toolbar{
-  background-color: red;
-  width:100px;
-  height: 50px;
-}
-.triangle-right {
-	width: 0;
-	height: 0;
-	border-top: 25px solid transparent;
-	border-left: 50px solid #555;
-	border-bottom: 25px solid transparent;
-}
 </style>
+

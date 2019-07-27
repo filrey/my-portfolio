@@ -1,6 +1,6 @@
 {
-  "name": "my-portfolio",
-  "short_name": "my-portfolio",
+  "name": "vuetify-router-boilerplate",
+  "short_name": "vuetify-router-boilerplate",
   "icons": [
     {
       "src": "./img/icons/android-chrome-192x192.png",
