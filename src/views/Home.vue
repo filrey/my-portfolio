@@ -3,7 +3,7 @@
     <v-container fluid fill-height>
       <v-layout align-center justify-left>
         <v-flex xs12 sm12 md7>
-          <v-card>
+          <v-card class="cardSlide">
           <v-sheet class="elevation-12">
 
             <v-img src="../assets/png/bg3.png"></v-img>
@@ -59,8 +59,14 @@ export default {
   background-attachment: fixed;
   background-position: center;
 }
-.tWhite{
-  color: white;
+
+.cardSlide{
+  -webkit-animation: mymove 1s infinite; /* Safari 4.0 - 8.0 */
+  animation: slideIn 1s infinite;
+}
+@keyframes slideIn {
+  from {left: -1000px;}
+  to {left: 0px;}
 }
 
 </style>
